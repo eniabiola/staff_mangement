@@ -39,6 +39,7 @@
                           <th scope="col">Email</th>
                           <th scope="col">Staff Status</th>
                           <th scope="col">Address</th>
+                          <th scope="col">Action</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -68,16 +69,14 @@
                                 @endif
                               
                               <td>{{$member->address}}</td>
+                              <td>
+                                <a href="{{ route('staffmanagement.edit', $member->id) }}" class="btn btn-primary">Edit User</a>
+                              </td>
                             </tr>
                           </tbody>
                         @endforeach
                     </table>
-
-
-                        
-                        
-                        
-                        
+            
                         
                 </div>
                 <div class="card-footer">
